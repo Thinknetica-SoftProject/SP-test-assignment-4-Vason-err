@@ -16,7 +16,7 @@
 #
 ## Решение:
 floor_num = 0
-instruct = IO.read('1.txt')
+instruct = IO.read('/data/1.txt')
 i = instruct.count '('
 o = instruct.count ')'
 puts floor_num + i - o
