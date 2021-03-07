@@ -9,7 +9,7 @@
 # - Результат должен быть выведен в консоль командой puts
 #
 ## Решение:
-s = IO.read('/data/3.txt')
+s = IO.read('data/3.txt')
 a = s.split
 b = 0
 a.each do |i|

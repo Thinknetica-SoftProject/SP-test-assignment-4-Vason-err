@@ -15,7 +15,7 @@
 #
 #
 ## Решение:
-f = IO.read('/data/4.txt')
+f = IO.read('data/4.txt')
 s = f.split(' ')
 b = 0
 s.each do |i|
