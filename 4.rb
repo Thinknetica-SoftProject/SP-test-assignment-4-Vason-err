@@ -15,5 +15,15 @@
 #
 #
 ## Решение:
-
+f = IO.read('/data/4.txt')
+s = f.split(' ')
+b = 0
+s.each do |i|
+a = i.split("x").map(&:to_i)
+g = a.map.with_index{|k, l| k if l != a.find_index(a.min) and l != a.find_index(a.max)}.compact
+b += 2 * a.min * a.max + 2 * g[0].to_i * a.min + 2 * a.max * g[0].to_i + g[0].to_i * a.min
+a.clear
+g.clear
+end
+puts b
 

@@ -15,4 +15,14 @@
 #
 #
 ## Решение:
-
+require 'digest'
+main = Digest::MD5.new
+plus = gets.chomp
+main.update plus
+buf = 0
+main1 = Digest::MD5.hexdigest 'abcdef609043'
+while main.hexdigest[0,5] != "00000" do
+     main.update buf.to_s
+buf += 1
+end
+puts buf

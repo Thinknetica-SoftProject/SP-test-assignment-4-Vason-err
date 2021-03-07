@@ -9,5 +9,11 @@
 # - Результат должен быть выведен в консоль командой puts
 #
 ## Решение:
-
+s = IO.read('/data/3.txt')
+a = s.split
+b = 0
+a.each do |i|
+b += i.split('').map(&:to_i).min + i.split('').map(&:to_i).max
+end
+puts b
 
