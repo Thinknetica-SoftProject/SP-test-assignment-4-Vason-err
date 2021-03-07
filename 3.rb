@@ -10,10 +10,10 @@
 #
 ## Решение:
 s = IO.read('data/3.txt')
-a = s.split
+a = s.split("\n")
 b = 0
 a.each do |i|
-b += i.split('').map(&:to_i).min + i.split('').map(&:to_i).max
+b += (i.split(' ').map(&:to_i).max - i.split(' ').map(&:to_i).min)
 end
 puts b
 
